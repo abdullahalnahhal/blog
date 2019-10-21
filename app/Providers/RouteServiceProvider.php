@@ -43,6 +43,14 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapAdminAdmins();
         // $this->mapAdminGuests();
         $this->mapAdminAdminsPermissions();
+        $this->mapAdminAbout();
+        $this->mapAdminFields();
+        $this->mapAdminAchievements();
+        $this->mapAdminClients();
+        $this->mapAdminGallery();
+        $this->mapAdminVideos();
+        $this->mapAdminContacts();
+        $this->mapAdminBlog();
     }
 
     /**
@@ -99,5 +107,77 @@ class RouteServiceProvider extends ServiceProvider
            ->name('cp.admins-permissions.')
            ->namespace('App\Http\Controllers')
            ->group(base_path('routes/cp/admins-permissions/web.php'));
+    }
+    protected function mapAdminHomeSlider()
+    {
+      Route::middleware('web')
+           ->prefix('cp/home-slider')
+           ->name('cp.home-slider.')
+           ->namespace('App\Http\Controllers')
+           ->group(base_path('routes/cp/home-slider/web.php'));
+    }
+    protected function mapAdminAbout()
+    {
+      Route::middleware('web')
+           ->prefix('cp/about-us')
+           ->name('cp.about-us.')
+           ->namespace('App\Http\Controllers')
+           ->group(base_path('routes/cp/about/web.php'));
+    }
+    protected function mapAdminFields()
+    {
+      Route::middleware('web')
+           ->prefix('cp/fields')
+           ->name('cp.fields.')
+           ->namespace('App\Http\Controllers')
+           ->group(base_path('routes/cp/fields/web.php'));
+    }
+    protected function mapAdminAchievements()
+    {
+      Route::middleware('web')
+           ->prefix('cp/achievements')
+           ->name('cp.achievements.')
+           ->namespace('App\Http\Controllers')
+           ->group(base_path('routes/cp/achievements/web.php'));
+    }
+    protected function mapAdminClients()
+    {
+      Route::middleware('web')
+           ->prefix('cp/clients')
+           ->name('cp.clients.')
+           ->namespace('App\Http\Controllers')
+           ->group(base_path('routes/cp/clients/web.php'));
+    }
+    protected function mapAdminGallery()
+    {
+      Route::middleware('web')
+           ->prefix('cp/gallery')
+           ->name('cp.gallery.')
+           ->namespace('App\Http\Controllers')
+           ->group(base_path('routes/cp/gallery/web.php'));
+    }
+    protected function mapAdminVideos()
+    {
+      Route::middleware('web')
+           ->prefix('cp/videos')
+           ->name('cp.videos.')
+           ->namespace('App\Http\Controllers')
+           ->group(base_path('routes/cp/videos/web.php'));
+    }
+    protected function mapAdminContacts()
+    {
+      Route::middleware('web')
+           ->prefix('cp/contacts')
+           ->name('cp.contacts.')
+           ->namespace('App\Http\Controllers')
+           ->group(base_path('routes/cp/contacts/web.php'));
+    }
+    protected function mapAdminBlog()
+    {
+      Route::middleware('web')
+           ->prefix('cp/blog')
+           ->name('cp.blog.')
+           ->namespace('App\Http\Controllers')
+           ->group(base_path('routes/cp/blog/web.php'));
     }
 }

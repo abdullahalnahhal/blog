@@ -7,6 +7,60 @@
       </a>
     </li>
     <li class="nav-item">
+      <a class="nav-link" href="{{route('cp.index')}}">
+        <i class="mdi mdi-view-carousel menu-icon"></i>
+        <span class="menu-title">@lang('sidebar.Home Slider')</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{route('cp.index')}}">
+        <i class="mdi mdi-voice menu-icon"></i>
+        <span class="menu-title">@lang('sidebar.About Us')</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{route('cp.index')}}">
+        <i class="mdi mdi-apple-keyboard-option menu-icon"></i>
+        <span class="menu-title">@lang('sidebar.Fields')</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{route('cp.index')}}">
+        <i class="mdi mdi-auto-fix menu-icon"></i>
+        <span class="menu-title">@lang('sidebar.Achievements')</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{route('cp.index')}}">
+        <i class="mdi mdi-account-circle menu-icon"></i>
+        <span class="menu-title">@lang('sidebar.Clients')</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{route('cp.index')}}">
+        <i class="mdi mdi-camera-iris menu-icon"></i>
+        <span class="menu-title">@lang('sidebar.Gallery')</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{route('cp.index')}}">
+        <i class="mdi mdi-video menu-icon"></i>
+        <span class="menu-title">@lang('sidebar.Videos')</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{route('cp.index')}}">
+        <i class="mdi mdi-contact-mail menu-icon"></i>
+        <span class="menu-title">@lang('sidebar.Contcts')</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{route('cp.index')}}">
+        <i class="mdi mdi-blogger menu-icon"></i>
+        <span class="menu-title">@lang('sidebar.Blog')</span>
+      </a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link collapsed" data-toggle="collapse" href="#users" aria-expanded="false" aria-controls="ui-basic">
         <i class="mdi mdi-account-multiple menu-icon"></i>
         <span class="menu-title">@lang('sidebar.Users')</span>
