@@ -43,6 +43,7 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapAdminAdmins();
         // $this->mapAdminGuests();
         $this->mapAdminAdminsPermissions();
+        $this->mapAdminHomeSlider();
         $this->mapAdminAbout();
         $this->mapAdminFields();
         $this->mapAdminAchievements();

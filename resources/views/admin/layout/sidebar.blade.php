@@ -7,55 +7,55 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{route('cp.index')}}">
+      <a class="nav-link" href="{{route('cp.home-slider.index')}}">
         <i class="mdi mdi-view-carousel menu-icon"></i>
         <span class="menu-title">@lang('sidebar.Home Slider')</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{route('cp.index')}}">
+      <a class="nav-link" href="{{route('cp.about-us.index')}}">
         <i class="mdi mdi-voice menu-icon"></i>
         <span class="menu-title">@lang('sidebar.About Us')</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{route('cp.index')}}">
+      <a class="nav-link" href="{{route('cp.fields.index')}}">
         <i class="mdi mdi-apple-keyboard-option menu-icon"></i>
         <span class="menu-title">@lang('sidebar.Fields')</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{route('cp.index')}}">
+      <a class="nav-link" href="{{route('cp.achievements.index')}}">
         <i class="mdi mdi-auto-fix menu-icon"></i>
         <span class="menu-title">@lang('sidebar.Achievements')</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{route('cp.index')}}">
+      <a class="nav-link" href="{{route('cp.clients.index')}}">
         <i class="mdi mdi-account-circle menu-icon"></i>
         <span class="menu-title">@lang('sidebar.Clients')</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{route('cp.index')}}">
+      <a class="nav-link" href="{{route('cp.gallery.index')}}">
         <i class="mdi mdi-camera-iris menu-icon"></i>
         <span class="menu-title">@lang('sidebar.Gallery')</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{route('cp.index')}}">
+      <a class="nav-link" href="{{route('cp.videos.index')}}">
         <i class="mdi mdi-video menu-icon"></i>
         <span class="menu-title">@lang('sidebar.Videos')</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{route('cp.index')}}">
+      <a class="nav-link" href="{{route('cp.contacts.index')}}">
         <i class="mdi mdi-contact-mail menu-icon"></i>
         <span class="menu-title">@lang('sidebar.Contcts')</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{route('cp.index')}}">
+      <a class="nav-link" href="{{route('cp.blog.index')}}">
         <i class="mdi mdi-blogger menu-icon"></i>
         <span class="menu-title">@lang('sidebar.Blog')</span>
       </a>
