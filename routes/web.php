@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('admin.index');
-})->name('cp.index');
+Route::get('/cp/login', 'UsersController@login')->name('login');
+Route::post('/cp/login', 'UsersController@loginSubmit')->name('login.submit');
+Route::get('/cp/logout', 'UsersController@logout')->name('logout');

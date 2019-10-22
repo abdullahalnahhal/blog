@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\User;
-use App\RoleUsers;
+use App\Models\RoleUsers;
 use App\Models\Articles;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -127,29 +127,30 @@ class UsersController /*extends Main*/
 
     public function login()
     {
-        return view('visitors.login',[
+        return view('admin.login',[
             'active' => '',
         ]);
     }
     public function loginSubmit(Request $request)
     {
-        $credintials = [
-			'email'=>$request->email,
-			'password'=>$request->password,
-		];
-		// attempt to log the user in
-		$auth = Auth::guard('web')->attempt($credintials);
-		// if successful then redirect to their intended location
-		if ($auth) {
-			// $this->makeSession($request);
-			return redirect()->intended(route("control-panel.index"));
-		}
-		// if not success return to the login page with the form data
-		return redirect()->back()->withErrors('Email Or Password May Be Wrong')->withInput($request->only('email', 'remember'));
+
+      $credintials = [
+  			'email'=>$request->username,
+  			'password'=>$request->password,
+  		];
+  		// attempt to log the user in
+  		$auth = Auth::guard('web')->attempt($credintials);
+  		// if successful then redirect to their intended location
+  		if ($auth) {
+    		// $this->makeSession($request);
+    		return redirect()->intended(route("cp.index"));
+		  }
+    	// if not success return to the login page with the form data
+    	return redirect()->back()->withErrors('Email Or Password May Be Wrong')->withInput($request->only('email', 'remember'));
     }
     public function logout()
-	{
-		Auth::guard('web')->logout();
-		return redirect()->route('login');
-	}
+  	{
+  		Auth::guard('web')->logout();
+  		return redirect()->route('login');
+  	}
 }

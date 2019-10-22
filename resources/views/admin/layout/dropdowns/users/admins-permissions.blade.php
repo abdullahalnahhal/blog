@@ -39,6 +39,11 @@ class='{{$classes??''}}'
     <option value="update-fields" {{(isset($select_from)&&in_array('update-fields', $select_from))?'selected':''}}>@lang('users.Update Fields')</option>
     <option value="delete-fields" {{(isset($select_from)&&in_array('delete-fields', $select_from))?'selected':''}}>@lang('users.Delete Fields')</option>
 
+    <option value="access-achievements" {{(isset($select_from)&&in_array('access-achievements', $select_from))?'selected':''}}>@lang('users.Access Achievements')</option>
+    <option value="create-achievements" {{(isset($select_from)&&in_array('create-achievements', $select_from))?'selected':''}}>@lang('users.Create Achievements')</option>
+    <option value="update-achievements" {{(isset($select_from)&&in_array('update-achievements', $select_from))?'selected':''}}>@lang('users.Update Achievements')</option>
+    <option value="delete-achievements" {{(isset($select_from)&&in_array('delete-achievements', $select_from))?'selected':''}}>@lang('users.Delete Achievements')</option>
+
     <option value="access-clients" {{(isset($select_from)&&in_array('access-clients', $select_from))?'selected':''}}>@lang('users.Access Clients')</option>
     <option value="create-clients" {{(isset($select_from)&&in_array('create-clients', $select_from))?'selected':''}}>@lang('users.Create Clients')</option>
     <option value="update-clients" {{(isset($select_from)&&in_array('update-clients', $select_from))?'selected':''}}>@lang('users.Update Clients')</option>

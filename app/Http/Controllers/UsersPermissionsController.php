@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use App\Roles;
+use App\Models\Roles;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\UsersPermissionsRequest;
@@ -36,23 +36,22 @@ class UsersPermissionsController  /*extends Main*/
 		  }
 		    return back()->withErrors('common.Sorry But there Was an issue in saving Data please try again');
 		}
-    public function edit($id)
+    public function edit($role)
     {
-        $role = Roles::find($id);
-        return view('users.roles.form',[
-            'active'=>'Users Roles',
+        $role = Roles::find($role);
+        return view('admin.users.permissions.form',[
             'action'=>'Edit',
             'role'=>$role
         ]);
     }
-    public function update (Request $request, $id)
+    public function update (Request $request, $permission)
 		{
-			$role = Roles::find($id);
+			$role = Roles::find($permission);
 			$role->name = $request->name;
 			$role->slug = $request->slug;
 	    $role->permissions = json_encode($request->permissions);
 		  if ($role->save()) {
-		      return redirect()->route('users.roles.index')->with('updated','settings.User Roles Has Been Updated ...!');
+		      return redirect()->route('cp.permissions.index')->with('updated','settings.User Roles Has Been Updated ...!');
 		  }
 		  return back()->withErrors('common.Sorry But there Was an issue in saving Data please try again');
 		}

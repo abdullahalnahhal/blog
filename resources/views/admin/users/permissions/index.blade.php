@@ -6,7 +6,7 @@
 <!-- End plugin css for this page -->
 @endpush
 @section('content')
-<a href="{{route('cp.admins-permissions.create')}}" class="btn btn-primary btn-icon-text">
+<a href="{{route('cp.permissions.create')}}" class="btn btn-primary btn-icon-text">
   <i class="mdi mdi-plus btn-icon-prepend"></i>
   @lang('common.New')
 </a>

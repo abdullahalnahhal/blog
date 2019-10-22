@@ -13,9 +13,8 @@
         <th>{{$role->name}}</th>
         <th>{{$role->slug}}</th>
         <th>
-          <button type="button" class="btn btn-outline-success btn-fw">@lang('common.View')</button>
-          <button type="button" class="btn btn-outline-info btn-fw">@lang('common.Edit')</button>
-          <button type="button" class="btn btn-outline-danger btn-fw">@lang('common.Delete')</button>
+          <a href="{{route('cp.permissions.edit',[$role->id])}}" class="btn btn-outline-info btn-fw">@lang('common.Edit')</a>
+          <a href="{{route('cp.permissions.destroy',[$role->id])}}" class="btn btn-outline-danger btn-fw">@lang('common.Delete')</a>
         </th>
       </tr>
       @endforeach

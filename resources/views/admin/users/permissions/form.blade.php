@@ -15,6 +15,9 @@
         @if($action == 'Create')
           @include('admin.layout.forms.users.create.admins-permissions')
         @endif
+        @if($action == 'Edit')
+          @include('admin.layout.forms.users.edit.admins-permissions')
+        @endif
       </div>
     </div>
   </div>
