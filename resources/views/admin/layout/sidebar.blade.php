@@ -93,8 +93,8 @@
           @can('access-guests')
           <li class="nav-item"> <a class="nav-link" href="">@lang('sidebar.Guests')</a></li>
           @endcan
-          @can('access-admins-permissions')
-          <li class="nav-item"> <a class="nav-link" href="{{route('cp.admins-permissions.index')}}">@lang('sidebar.Admins Permissions')</a></li>
+          @can('access-admins-permission')
+          <li class="nav-item"> <a class="nav-link" href="{{route('cp.permissions.index')}}">@lang('sidebar.Admins Permissions')</a></li>
           @endcan
         </ul>
       </div>
