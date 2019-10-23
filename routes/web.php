@@ -13,6 +13,4 @@
 Route::get('/cp/login', 'UsersController@login')->name('cp.login');
 Route::post('/cp/login', 'UsersController@loginSubmit')->name('cp.login.submit');
 
-Route::get('/', function () {
-    return view('guest.index');
-})->name('index');
+Route::get('/', 'HomeController@guestIndex')->name('index');
