@@ -13,7 +13,7 @@
 
 	<!-- CSS
 	================================================== -->
-
+	<link rel="shortcut icon" href="{{asset('images/favicon.png')}}">
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="{{asset('guest/css/bootstrap.min.css')}}">
 	<!-- Template styles-->
