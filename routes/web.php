@@ -10,7 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/cp/login', 'UsersController@login')->name('cp.login');
+Route::post('/cp/login', 'UsersController@loginSubmit')->name('cp.login.submit');
 
-Route::get('/cp/login', 'UsersController@login')->name('login');
-Route::post('/cp/login', 'UsersController@loginSubmit')->name('login.submit');
-Route::get('/cp/logout', 'UsersController@logout')->name('logout');
+Route::get('/', function () {
+    return view('guest.index');
+})->name('index');

@@ -6,4 +6,5 @@
 <!-- inject:css -->
 <link rel="stylesheet" href="{{asset('css/vertical-layout-light/style.css')}}">
 <!-- endinject -->
-<link rel="shortcut icon" href="{{asset('images/favicon.png')}}"
+<link rel="shortcut icon" href="{{asset('images/favicon.png')}}">
+<link rel="stylesheet" href="{{asset("vendors/jquery-toast-plugin/jquery.toast.min.css")}}">

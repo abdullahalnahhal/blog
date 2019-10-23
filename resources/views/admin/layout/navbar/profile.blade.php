@@ -8,7 +8,7 @@
     Settings
   </a> -->
   <div class="dropdown-divider"></div>
-  <a href='{{route('logout')}}' class="dropdown-item">
+  <a href='{{route('cp.logout')}}' class="dropdown-item">
     <i class="mdi mdi-logout text-primary"></i>
     Logout
   </a>

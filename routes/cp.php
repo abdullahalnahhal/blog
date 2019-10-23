@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('admin.index');
+    return view('admin.index',[
+      'active' => 'Dashboard'
+    ]);
 })->name('index');
 Route::resource('about', 'AboutController');
 Route::resource('achievements', 'AchievementsController');
@@ -26,6 +28,4 @@ Route::resource('gallery', 'GalleryController');
 Route::resource('slider', 'HomeSliderController');
 Route::resource('videos', 'VideosController');
 Route::resource('blog', 'BlogController');
-// Route::get('/cp/login', 'UsersController@login')->name('login');
-// Route::post('/cp/login', 'UsersController@loginSubmit')->name('login.submit');
-// Route::get('/cp/logout', 'UsersController@logout')->name('logout');
+Route::get('logout', 'UsersController@logout')->name('logout');

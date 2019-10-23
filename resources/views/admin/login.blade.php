@@ -19,7 +19,7 @@
               </div>
               <h4>@lang('settings.Welcome Back')!</h4>
               <h6 class="font-weight-light">@lang('settings.Thanks For Using Our App')!</h6>
-              <form class="pt-3" id="sign_in" method="POST" action="{{route('login.submit')}}" autocomplete="false">
+              <form class="pt-3" id="sign_in" method="POST" action="{{route('cp.login.submit')}}" autocomplete="false">
                 @csrf
                 <div class="form-group">
                   <label for="exampleInputEmail">@lang('settings.User Login Name')</label>
