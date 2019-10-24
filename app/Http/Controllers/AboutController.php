@@ -15,27 +15,27 @@ class AboutController /*extends Main*/
      *
      * @return \Illuminate\Http\Response
      */
-     public function index()
-     {
-         $about = About::all();
-         return view('admin.about.index',[
-             'active' => 'About Us',
-             'about' => $about,
-         ]);
-     }
-     public function main(Request $request)
-     {
-          $main = About::where('type', '=', 1)->first();
-          if(!$main || !$main->count()){
-            $main = new About;
-            $main->type = 1;
-          }
-          $main->content = $request->main;
-          if($main->save()){
-            return redirect()->route('cp.about.index')->with('created','messages.Main Content Of About Page Has Been Created Successfully');
-          }
-          return back()->withErrors('messages.Main Content Of About Page Didn\'t  Added Successfully Please Call The System Admin');
-     }
+    public function index()
+    {
+      $about = About::all();
+      return view('admin.about.index',[
+        'active' => 'About Us',
+        'about' => $about,
+      ]);
+    }
+    public function main(Request $request)
+    {
+      $main = About::where('type', '=', 1)->first();
+      if(!$main || !$main->count()){
+        $main = new About;
+        $main->type = 1;
+      }
+      $main->content = $request->main;
+      if($main->save()){
+        return redirect()->route('cp.about.index')->with('created','messages.Main Content Of About Page Has Been Created Successfully');
+      }
+      return back()->withErrors('messages.Main Content Of About Page Didn\'t  Added Successfully Please Call The System Admin');
+    }
     public function create()
     {
       return view('admin.about.form',[
@@ -79,5 +79,15 @@ class AboutController /*extends Main*/
         return redirect()->route('cp.about.index')->with('deleted','messages.About Section Deleted Successfully');
       }
       return back()->withErrors('messages.Slide Didn\'t Deleted Successfully Please Call The System Admin');
+    }
+    public function guestIndex()
+    {
+      $sections = About::where('type', '=', 2)->get();
+      $main = About::where('type', '=', 1)->first();
+      return view('guest.about',[
+        'active' => 'About Us',
+        'sections' => $sections,
+        'main' => $main,
+      ]);
     }
 }

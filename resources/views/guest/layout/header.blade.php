@@ -21,25 +21,8 @@
 
 					<div class="collapse navbar-collapse navbar-responsive-collapse">
 						<ul class="nav navbar-nav">
-							<li class="dropdown">
-								<a href="{{route('index')}}">@lang('sidebar.Home')</a>
-								<!-- <ul class="dropdown-menu" role="menu">
-									<li><a href="index.html">Home One</a></li>
-									<li class="active"><a href="index-2.html">Home Two</a></li>
-								</ul> -->
-							</li>
-
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Company <i
-										class="fa fa-angle-down"></i></a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="about.html">About Us</a></li>
-									<li><a href="team.html">Our People</a></li>
-									<li><a href="testimonials.html">Testimonials</a></li>
-									<li><a href="faq.html">Faq</a></li>
-									<li><a href="pricing.html">Pricing</a></li>
-								</ul>
-							</li>
+							<li><a href="{{route('index')}}">@lang('sidebar.Home')</a></li>
+							<li><a href="{{route('about')}}">@lang('sidebar.About Us')</a></li>
 
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <i
