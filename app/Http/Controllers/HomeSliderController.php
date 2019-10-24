@@ -95,7 +95,7 @@ class HomeSliderController /*extends Main*/
       return back()->withErrors('messages.Slide Didn\'t  Updated Successfully Please Call The System Admin');
     }
     /**
-     * Update a resource in storage.
+     * Destroy a resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response

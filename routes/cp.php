@@ -16,6 +16,7 @@ Route::get('/', function () {
       'active' => 'Dashboard'
     ]);
 })->name('index');
+Route::post('about/main', 'AboutController@main')->name('about.main-store');
 Route::resource('about', 'AboutController');
 Route::resource('achievements', 'AchievementsController');
 Route::resource('admins', 'UsersController')
