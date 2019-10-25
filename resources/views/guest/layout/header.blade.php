@@ -23,6 +23,7 @@
 						<ul class="nav navbar-nav">
 							<li><a href="{{route('index')}}">@lang('sidebar.Home')</a></li>
 							<li><a href="{{route('about')}}">@lang('sidebar.About Us')</a></li>
+							<li><a href="{{route('fields')}}">@lang('sidebar.About Us')</a></li>
 
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <i
