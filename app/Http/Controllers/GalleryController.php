@@ -8,6 +8,7 @@ use App\Models\Fields;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\GalleryRequest;
+use App\Http\Requests\GalleryUpdateRequest;
 
 class GalleryController /*extends Main*/
 {
@@ -78,7 +79,7 @@ class GalleryController /*extends Main*/
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
    */
-  public function update(SliderUpdateRequest $request, $gallery)
+  public function update(GalleryUpdateRequest $request, $gallery)
   {
     $gallery = new Gallery;
     $gallery->title = $request->title;
