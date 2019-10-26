@@ -94,4 +94,25 @@ class FieldsController /*extends Main*/
       }
       return back()->withErrors('messages.Field Didn\'t  Deleted Successfully Please Call The System Admin');
     }
+    /**
+     * Show The Index For Guests.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function guestIndex()
+    {
+      $fields = Fields::all();
+      return view('guest.fields',[
+        'active' => 'Fields',
+        'fields' => $fields,
+      ]);
+    }
+    public function guestShow($id)
+    {
+      $field = Fields::find($id);
+      return view('guest.field',[
+        'active' => 'Fields',
+        'field' => $field,
+      ]);
+    }
 }

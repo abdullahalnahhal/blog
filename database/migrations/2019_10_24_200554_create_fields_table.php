@@ -22,6 +22,10 @@ class CreateFieldsTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+        Schema::table('fields', function (Blueprint $table) {
+          $table->foreign('parent')->references('id')->on('fields');
+        });
+
     }
 
     /**

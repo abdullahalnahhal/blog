@@ -8,8 +8,8 @@
           <div class="banner-heading">
             <h1 class="banner-title">@lang('sidebar.About Us')</h1>
             <ol class="breadcrumb">
-              <li><a href="{{route('index')}}">Home</a></li>
-            	<li>About Us</li>
+              <li><a href="{{route('index')}}">@lang('sidebar.Home')</a></li>
+            	<li>@lang('sidebar.About Us')</li>
         		</ol>
           </div>
     		</div><!-- Col end -->

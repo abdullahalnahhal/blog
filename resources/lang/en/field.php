@@ -8,4 +8,5 @@ return [
   'The Main About Content' => 'The Main About Content',
   'Field Name' => 'Field Name',
   'Parent Field' =>'Parent Field',
+  'Sub Fields' => 'Sub Fields',
 ];

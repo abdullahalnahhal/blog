@@ -15,4 +15,5 @@ Route::post('/cp/login', 'UsersController@loginSubmit')->name('cp.login.submit')
 
 Route::get('/', 'HomeController@guestIndex')->name('index');
 Route::get('/about', 'AboutController@guestIndex')->name('about');
-Route::get('/fields', 'FieldsController@fieldsIndex')->name('fields');
+Route::get('/fields', 'FieldsController@guestIndex')->name('fields');
+Route::get('/field/{id}', 'FieldsController@guestShow')->where(['id' => '[0-9]+'])->name('field');
