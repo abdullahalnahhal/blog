@@ -74,7 +74,7 @@
 								<div class="project-item-info">
 									<div class="project-item-info-content">
 										<h3 class="project-item-title">
-											<a href="projects-single.html">{{$image->title}}</a>
+											<a href="javascript:void(0)">{{$image->title}}</a>
 										</h3>
 										<p class="project-cat">
 											{{$image->field->title}}

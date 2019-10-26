@@ -24,6 +24,7 @@
 							<li><a href="{{route('index')}}">@lang('sidebar.Home')</a></li>
 							<li><a href="{{route('about')}}">@lang('sidebar.About Us')</a></li>
 							<li><a href="{{route('fields')}}">@lang('sidebar.Fields')</a></li>
+							<li><a href="{{route('gallery')}}">@lang('sidebar.Gallery')</a></li>
 
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <i

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\Models\Gallery;
+use App\Models\Fields;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\GalleryRequest;
@@ -111,10 +112,12 @@ class GalleryController /*extends Main*/
    */
   public function guestIndex()
   {
-    $fields = Fields::all();
-    return view('guest.fields',[
-      'active' => 'Fields',
+    $fields = Fields::main();
+    $gallery = Gallery::inRandomOrder()->get();
+    return view('guest.gallery',[
+      'active' => 'Gallery',
       'fields' => $fields,
+      'gallery' => $gallery,
     ]);
   }
 }
