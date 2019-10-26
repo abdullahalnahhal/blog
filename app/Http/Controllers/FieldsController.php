@@ -110,6 +110,9 @@ class FieldsController /*extends Main*/
     public function guestShow($id)
     {
       $field = Fields::find($id);
+      $val =  collect($field->all_parents())->map(function ($value) {
+        return $value->title;
+      });
       return view('guest.field',[
         'active' => 'Fields',
         'field' => $field,

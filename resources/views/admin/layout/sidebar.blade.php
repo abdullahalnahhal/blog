@@ -31,20 +31,20 @@
     </li>
     @endcan
     @can('access-achievements')
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link" href="{{route('cp.achievements.index')}}">
         <i class="mdi mdi-auto-fix menu-icon"></i>
         <span class="menu-title">@lang('sidebar.Achievements')</span>
       </a>
-    </li>
+    </li> -->
     @endcan
     @can('access-clients')
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link" href="{{route('cp.clients.index')}}">
         <i class="mdi mdi-account-circle menu-icon"></i>
         <span class="menu-title">@lang('sidebar.Clients')</span>
       </a>
-    </li>
+    </li> -->
     @endcan
     @can('access-gallery')
     <li class="nav-item">

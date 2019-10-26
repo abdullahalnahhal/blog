@@ -36,6 +36,16 @@ class Fields extends Model
       return $this->hasMany('App\Models\Fields', 'parent', 'id');
     }
 
+    public function parent_field()
+    {
+      return $this->hasOne('App\Models\Fields', 'id', 'parent');
+    }
+
+    public function gallery()
+    {
+      return $this->hasOne('App\Models\Gallery', 'id', 'field_id');
+    }
+
     public function all_fields()
     {
       $all = [];
@@ -47,6 +57,20 @@ class Fields extends Model
             $new_subfields = $sub_field->all_fields();
             $all = array_merge($all, $new_subfields);
           }
+      }
+      return $all;
+    }
+
+    public function all_parents()
+    {
+      $all = [];
+      $parent_field = $this->parent_field;
+      if($parent_field){
+        $all[] = $parent_field;
+      }
+      if(isset($parent_field->parent)){
+        $new_parent = $parent_field->all_parents();
+        $all = array_merge($all, $new_parent);
       }
       return $all;
     }

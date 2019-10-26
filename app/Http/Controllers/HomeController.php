@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Slider;
+use App\Models\Fields;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 // use App\Http\Controllers\MainControllers\AdminsController as Main;
@@ -31,9 +33,13 @@ class HomeController /*extends Main*/
   public function guestIndex()
   {
       $slides = Slider::all();
+      $fields = Fields::main();
+      $gallery = Gallery::inRandomOrder()->limit(12)->get();
       return view('guest.index',[
           'active' => 'Home',
-          'slides' => $slides
+          'slides' => $slides,
+          'fields' => $fields,
+          'gallery' => $gallery,
       ]);
   }
 

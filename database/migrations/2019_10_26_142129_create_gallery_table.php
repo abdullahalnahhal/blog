@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFieldsTable extends Migration
+class CreateGalleryTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,18 @@ class CreateFieldsTable extends Migration
      */
     public function up()
     {
-        Schema::create('fields', function (Blueprint $table) {
+        Schema::create('gallery', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('parent')->unsigned()->nullable();
             $table->string('title', 200);
-            $table->text('content');
-            $table->string('icon', 50)->nulable();
+            $table->string('description', 500);
+            $table->text('image');
+            $table->integer('field_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
         });
-        Schema::table('fields', function (Blueprint $table) {
-          $table->foreign('parent')->references('id')->on('fields');
+        Schema::table('gallery', function (Blueprint $table) {
+          $table->foreign('field_id')->references('id')->on('fields');
         });
-
     }
 
     /**
@@ -35,9 +34,9 @@ class CreateFieldsTable extends Migration
      */
     public function down()
     {
-        Schema::table('fields', function (Blueprint $table) {
-          $table->dropForeign(['parent']);
+        Schema::table('gallery', function (Blueprint $table) {
+          $table->dropForeign(['field_id']);
         });
-        Schema::dropIfExists('fields');
+        Schema::dropIfExists('gallery');
     }
 }

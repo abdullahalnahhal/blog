@@ -17,3 +17,4 @@ Route::get('/', 'HomeController@guestIndex')->name('index');
 Route::get('/about', 'AboutController@guestIndex')->name('about');
 Route::get('/fields', 'FieldsController@guestIndex')->name('fields');
 Route::get('/field/{id}', 'FieldsController@guestShow')->where(['id' => '[0-9]+'])->name('field');
+Route::get('/gallery', 'GalleryController@guestIndex')->name('gallery');
