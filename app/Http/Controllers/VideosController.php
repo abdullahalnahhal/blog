@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\Models\Videos;
+use App\Models\Fields;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\VideosRequest;
@@ -108,7 +109,7 @@ class VideosController /*extends Main*/
   public function guestIndex()
   {
     $fields = Fields::main();
-    $videos = Gallery::inRandomOrder()->get();
+    $videos = Videos::inRandomOrder()->get();
     return view('guest.videos',[
       'active' => 'Gallery',
       'fields' => $fields,

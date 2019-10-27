@@ -5,4 +5,5 @@ return [
   'Work of Excellence' => 'Work of Excellence',
   'Recent Works' => 'Recent Works',
   'View All Works' => 'View All Works',
+  'Live Works' => 'Live Works',
 ];

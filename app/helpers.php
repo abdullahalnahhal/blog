@@ -181,4 +181,10 @@
 		}
 		return $hours.":".$minutes;
 	}
+	function prepareYoutube($link)
+	{
+		$link = explode('watch?v=', $link);
+		$link = $link[0].'/embed/'.$link[1];
+		return $link;
+	}
 ?>

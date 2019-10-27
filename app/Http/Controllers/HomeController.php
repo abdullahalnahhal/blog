@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Slider;
 use App\Models\Fields;
 use App\Models\Gallery;
+use App\Models\Videos;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 // use App\Http\Controllers\MainControllers\AdminsController as Main;
@@ -35,11 +36,13 @@ class HomeController /*extends Main*/
       $slides = Slider::all();
       $fields = Fields::main();
       $gallery = Gallery::inRandomOrder()->limit(12)->get();
+      $videos = Videos::inRandomOrder()->limit(4)->get();
       return view('guest.index',[
           'active' => 'Home',
           'slides' => $slides,
           'fields' => $fields,
           'gallery' => $gallery,
+          'videos' => $videos,
       ]);
   }
 
