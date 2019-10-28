@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\Models\Gallery;
+use App\Models\Contacts;
 use App\Models\Fields;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -115,10 +116,13 @@ class GalleryController /*extends Main*/
   {
     $fields = Fields::main();
     $gallery = Gallery::inRandomOrder()->get();
+    $contacts = Contacts::orderBy('id', 'DESC')->first();
+    $contacts = json_decode($contacts->info, true);
     return view('guest.gallery',[
       'active' => 'Gallery',
       'fields' => $fields,
       'gallery' => $gallery,
+      'contacts' => $contacts,
     ]);
   }
 }

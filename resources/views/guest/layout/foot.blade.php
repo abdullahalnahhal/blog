@@ -21,3 +21,4 @@
 
 <!-- Template custom -->
 <script type="text/javascript" src="{{asset('guest/js/custom.js')}}"></script>
+@stack('js')

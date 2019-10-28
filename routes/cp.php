@@ -17,6 +17,7 @@ Route::get('/', function () {
     ]);
 })->name('index');
 Route::post('about/main', 'AboutController@main')->name('about.main-store');
+Route::post('about/breif', 'AboutController@breif')->name('about.breif-store');
 Route::resource('about', 'AboutController');
 Route::resource('achievements', 'AchievementsController');
 Route::resource('admins', 'UsersController')

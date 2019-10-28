@@ -15,6 +15,7 @@
 		@yield('content')
 
 		@include('guest.layout.foot')
+    @include('guest.layout.footer')
 	</div><!-- Body inner end -->
 </body>
 

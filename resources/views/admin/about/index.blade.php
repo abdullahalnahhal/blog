@@ -21,6 +21,20 @@
     </div>
   </div>
 </div>
+<div class="card">
+  <div class="row">
+    <div class="col-12">
+      <div class="card-body">
+        <h4 class="card-title">@lang('about.The Breif About Content')</h4>
+        <div class="row">
+          <div class="col-12">
+            @include('admin.layout.forms.about.create.breif')
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <br>
 <a href="{{route('cp.about.create')}}" class="btn btn-primary btn-icon-text">
   <i class="mdi mdi-plus btn-icon-prepend"></i>

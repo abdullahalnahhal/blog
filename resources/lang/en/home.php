@@ -6,4 +6,5 @@ return [
   'Recent Works' => 'Recent Works',
   'View All Works' => 'View All Works',
   'Live Works' => 'Live Works',
+  'View All Videos' => 'View All Videos',
 ];

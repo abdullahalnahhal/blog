@@ -5,4 +5,5 @@ return [
   'Content' => 'Content',
   'About Sections' => 'About Sections',
   'The Main About Content' => 'The Main About Content',
+  'The Breif About Content' => 'The Breif About Content',
 ];

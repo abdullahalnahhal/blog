@@ -66,7 +66,7 @@
     <li class="nav-item">
       <a class="nav-link" href="{{route('cp.contacts.index')}}">
         <i class="mdi mdi-contact-mail menu-icon"></i>
-        <span class="menu-title">@lang('sidebar.Contcts')</span>
+        <span class="menu-title">@lang('sidebar.Contacts')</span>
       </a>
     </li>
     @endcan

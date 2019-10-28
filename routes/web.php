@@ -19,3 +19,4 @@ Route::get('/fields', 'FieldsController@guestIndex')->name('fields');
 Route::get('/field/{id}', 'FieldsController@guestShow')->where(['id' => '[0-9]+'])->name('field');
 Route::get('/gallery', 'GalleryController@guestIndex')->name('gallery');
 Route::get('/videos', 'VideosController@guestIndex')->name('videos');
+Route::get('/contacts', 'ContactsController@guestIndex')->name('contacts');

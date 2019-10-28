@@ -13,6 +13,6 @@ return [
   'Clients' => 'Clients',
   'Gallery' => 'Gallery',
   'Videos' => 'Videos',
-  'Contcts' => 'Contcts',
+  'Contacts' => 'Contacts',
   'Blog' => 'Blog',
 ];

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Auth;
 use App\Models\Videos;
 use App\Models\Fields;
+use App\Models\Contacts;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\VideosRequest;
@@ -110,10 +111,13 @@ class VideosController /*extends Main*/
   {
     $fields = Fields::main();
     $videos = Videos::inRandomOrder()->get();
+    $contacts = Contacts::orderBy('id', 'DESC')->first();
+    $contacts = json_decode($contacts->info, true);
     return view('guest.videos',[
       'active' => 'Gallery',
       'fields' => $fields,
       'videos' => $videos,
+      'contacts' => $contacts,
     ]);
   }
 }

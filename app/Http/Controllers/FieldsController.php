@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\Models\Fields;
+use App\Models\Contacts;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 // use App\Http\Controllers\MainControllers\AdminsController as Main;
@@ -102,20 +103,26 @@ class FieldsController /*extends Main*/
     public function guestIndex()
     {
       $fields = Fields::all();
+      $contacts = Contacts::orderBy('id', 'DESC')->first();
+      $contacts = json_decode($contacts->info, true);
       return view('guest.fields',[
         'active' => 'Fields',
         'fields' => $fields,
+        'contacts' => $contacts,
       ]);
     }
     public function guestShow($id)
     {
       $field = Fields::find($id);
+      $contacts = Contacts::orderBy('id', 'DESC')->first();
+      $contacts = json_decode($contacts->info, true);
       $val =  collect($field->all_parents())->map(function ($value) {
         return $value->title;
       });
       return view('guest.field',[
         'active' => 'Fields',
         'field' => $field,
+        'contacts' => $contacts,
       ]);
     }
 }

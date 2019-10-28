@@ -1,0 +1,22 @@
+<?php
+return [
+  'Email' => 'Email',
+  'Phone Number' => 'Phone Number',
+  'FaceBook Account' => 'FaceBook Account',
+  'Twitter Account' => 'Twitter Account',
+  'Instagram Account' => 'Instagram Account',
+  'Location Lattitude' => 'Location Lattitude',
+  'Location Longitude' => 'Location Longitude',
+  'Address' => 'Address',
+  'Reaching Us' => 'Reaching Us',
+  'Find Our Location' => 'Find Our Location',
+  'Visit Our Office' => 'Visit Our Office',
+  'Email Us' => 'Email Us',
+  'Call Us' => 'Call Us',
+  'We love to hear' => 'We love to hear',
+  'Name' => 'Name',
+  'Email' => 'Email',
+  'Subject' => 'Subject',
+  'Message' => 'Message',
+  'Send Message' => 'Send Message',
+];
