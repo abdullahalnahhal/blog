@@ -7,4 +7,8 @@ return [
   'View All Works' => 'View All Works',
   'Live Works' => 'Live Works',
   'View All Videos' => 'View All Videos',
+  'About Us' => 'About Us',
+  'Who Are We' => 'Who Are We',
+  'Quality Service' => 'Quality Service',
+  'Live Works' => 'Live Works',
 ];

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Slider;
+use App\Models\About;
 use App\Models\Fields;
 use App\Models\Gallery;
 use App\Models\Videos;
@@ -34,6 +35,7 @@ class HomeController /*extends Main*/
    */
   public function guestIndex()
   {
+      $breif = About::where('type', '=', 2)->first()->content??'';
       $slides = Slider::all();
       $fields = Fields::main();
       $gallery = Gallery::inRandomOrder()->limit(12)->get();
@@ -47,6 +49,7 @@ class HomeController /*extends Main*/
           'gallery' => $gallery,
           'videos' => $videos,
           'contacts' => $contacts,
+          'breif' => $breif,
       ]);
   }
 

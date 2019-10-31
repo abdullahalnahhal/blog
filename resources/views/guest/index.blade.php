@@ -7,30 +7,42 @@
 		<section id="main-container" class="main-container">
       <div class="container">
 				<div class="row text-center">
+					<h2 class="section-title">@lang('home.About Us')</h2>
+					<h3 class="section-sub-title">@lang('home.Who Are We') ... ?</h3>
+				</div>
+				<!--/ Title row end -->
+         <div class="row">
+					 {{$breif}}
+         </div><!-- Main row end -->
+      </div><!-- Conatiner end -->
+	  </section>
+		<section id="main-container" class="main-container">
+			<div class="container">
+				<div class="row text-center">
 					<h2 class="section-title">@lang('home.We Are Specialists In')</h2>
 					<h3 class="section-sub-title">@lang('home.What We Do')</h3>
 				</div>
 				<!--/ Title row end -->
-         <div class="row">
+				 <div class="row">
 					 @php
-					 	$counter = 0;
+						$counter = 0;
 					 @endphp
 					 @foreach($fields as $field)
-            <div class="col-md-4">
-               <div class="ts-service-box">
-                  <!-- <div class="ts-service-image-wrapper">
-                     <img class="img-responsive" src="images/services/service1.jpg" alt="">
-                  </div> -->
-                  <div class="ts-service-box-img pull-left">
-                     <img src="{{asset('images\vector\\'.$field->icon)}}" alt="">
-                  </div>
-                  <div class="ts-service-info">
-                     <h3 class="service-box-title"><a href="{{route('field',['id'=>$field->id])}}">{{$field->title}}</a></h3>
-                     <p>{!!Str::limit(strip_tags($field->content), 100, ' ...')!!}</p>
-                     <p><a class="learn-more" href="{{route('field', ['id'=>$field->id])}}"><i class="fa fa-caret-right"></i> Learn More</a></p>
-                  </div>
-               </div><!-- Service end -->
-            </div><!-- Col end -->
+						<div class="col-md-4">
+							 <div class="ts-service-box">
+									<!-- <div class="ts-service-image-wrapper">
+										 <img class="img-responsive" src="images/services/service1.jpg" alt="">
+									</div> -->
+									<div class="ts-service-box-img pull-left">
+										 <img src="{{asset('images\vector\\'.$field->icon)}}" alt="">
+									</div>
+									<div class="ts-service-info">
+										 <h3 class="service-box-title"><a href="{{route('field',['id'=>$field->id])}}">{{$field->title}}</a></h3>
+										 <p>{!!Str::limit(strip_tags($field->content), 100, ' ...')!!}</p>
+										 <p><a class="learn-more" href="{{route('field', ['id'=>$field->id])}}"><i class="fa fa-caret-right"></i> Learn More</a></p>
+									</div>
+							 </div><!-- Service end -->
+						</div><!-- Col end -->
 						@php
 						$counter ++;
 						@endphp
@@ -38,9 +50,9 @@
 						<div class="gap-30"></div>
 						@endif
 						@endforeach
-         </div><!-- Main row end -->
-      </div><!-- Conatiner end -->
-	  </section>
+				 </div><!-- Main row end -->
+			</div><!-- Conatiner end -->
+		</section>
 	 	<section id="project-area" class="project-area solid-bg">
 				<div class="container">
 					<div class="row text-center">
@@ -104,8 +116,8 @@
 		<section id="ts-team" class="ts-team">
 		 <div class="container">
 				<div class="row text-center">
-					 <h2 class="section-title">Quality Service</h2>
-					 <h3 class="section-sub-title">Professional Team</h3>
+					 <h2 class="section-title">@lang('home.Quality Service')</h2>
+					 <h3 class="section-sub-title">@lang('home.Live Works')</h3>
 				</div><!--/ Title row end -->
 
 				<div class="row">
@@ -123,7 +135,7 @@
 											<!-- <img alt="" src="{{asset("guest/images/team/team6.jpg")}}" class="img-responsive"> -->
 									 </div>
 									 <div class="ts-team-content">
-											<h3 class="ts-name">{{$video->title}}</h3>
+											<h3 class="ts-name"><a href='{{$video->link}}' class="ts-name">{{$video->title}}</a></h3>
 											<p class="ts-description">
 												{{Str::limit($video->description, 100, '...')}}
 											</p>
