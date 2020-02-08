@@ -22,6 +22,7 @@ class HomeController /*extends Main*/
    */
   public function adminIndex()
   {
+    
       $admins = User::all();
       return view('admin.users.users.index',[
           'active' => 'Admins',

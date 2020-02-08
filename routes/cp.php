@@ -12,6 +12,14 @@
 */
 
 Route::get('/', function () {
+	// try {
+	//     throw new App\Exceptions\TestException;
+	// } catch (App\Exceptions\TestException $e) {
+	//     print $e->render();
+	// }
+
+
+	// dd('dd');
     return view('admin.index',[
       'active' => 'Dashboard'
     ]);

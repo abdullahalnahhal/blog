@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="banner-heading">
-            <h1 class="banner-title">@lang('sidebar.Fields')</h1>
+            <h1 class="banner-title">@lang('sidebar.Videos')</h1>
             <ol class="breadcrumb">
               <li><a href="{{route('index')}}">@lang('sidebar.Home')</a></li>
             	<li>@lang('sidebar.Videos')</li>
